@@ -6,7 +6,7 @@ import styles from "./top.module.css";
 export default function Top() {
   return (
     <div>
-      <div style={{ display: "flex", paddingTop: 20, flexDirection: "column" }}>
+      <div style={{ display: "flex", paddingTop: 20 }}>
         <div style={{ flex: "100px 0 0" }}>
           <Img
             src="/images/logo.jpeg"
@@ -18,8 +18,8 @@ export default function Top() {
           />
         </div>
         <Header as="h1">ywtechit</Header>
-        <Gnb />
       </div>
+      <Gnb />
     </div>
   );
 }
