@@ -1,8 +1,22 @@
 import axios from "axios";
 import Head from "next/head";
+import { useRouter } from "next/router";
+import { Loader } from "semantic-ui-react";
 import Item from "../../src/components/item";
 
 const Post = ({ item, name }) => {
+  const router = useRouter();
+
+  if (router.isFallback) {
+    return (
+      <div style={{ padding: "100px 0" }}>
+        <Loader active inline="centered">
+          Loading...
+        </Loader>
+      </div>
+    );
+  }
+
   return (
     <>
       {item && (
